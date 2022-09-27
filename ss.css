@@ -1,0 +1,655 @@
+
+	@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  background-color: #08090A; }
+
+#uni {
+  z-index: 1;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+ }
+
+#func {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; }
+
+.ellipse {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation-name: ellipse;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+.ellipse .ellipse {
+  animation-name: subellipse; }
+
+.pos {
+  position: absolute;
+  top: 50%;
+  width: 2em;
+  height: 2em;
+  margin-top: -1em;
+  margin-left: -1em;
+  transform-style: preserve-3d;
+  animation-name: invert;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+#sjbhsmun, .comm {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  margin-left: -0.5em;
+  border-radius: 50%; }
+
+#sjbhsmun {
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.comm {
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+#unga {
+  z-index: 6; }
+
+#klaqc {
+  z-index: 5; }
+
+#hsc {
+  z-index: 4; }
+
+#lok {
+  z-index: 3; }
+
+#interpol {
+  z-index: 2; }
+
+#sjbhsmun {
+  z-index: 1; }
+
+@keyframes ellipse {
+  0% {
+    transform: rotateZ(0deg); }
+
+  100% {
+    transform: rotateZ(-360deg); } }
+
+@keyframes subellipse {
+  0% {
+    transform: rotateX(90deg) rotateZ(0deg); }
+
+  100% {
+    transform: rotateX(90deg) rotateZ(-360deg); } }
+
+@keyframes invert {
+  0% {
+    transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg); }
+
+  100% {
+    transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); } }
+
+.view-3D.zoom-large #sjbhsmun {
+  transform-style: preserve-3d; }
+
+.view-3D.zoom-large .ellipse {
+  transform-style: preserve-3d; }
+
+.view-3D #func {
+  transform: rotateX(75deg); }
+
+.view-3D #sjbhsmun {
+  transform: rotateX(-90deg); }
+
+.view-3D .ring {
+  transform: rotateX(90deg); }
+
+.view-3D .comm,{
+  transform: rotateX(0deg); }
+
+.zoom-large #func {
+  width: 100%; }
+
+.zoom-large.view-2D .scale-stretched #func {
+  font-size: 26%; }
+
+.zoom-large.view-3D .scale-stretched #func {
+  font-size: 62%; }
+
+.zoom-large.view-2D .scale-d #func {
+  font-size: 22%; }
+
+.zoom-large.view-3D .scale-d #func {
+  font-size: 48%; }
+
+.zoom-large.view-2D .scale-s #func {
+  font-size: 7%; }
+
+.zoom-large.view-3D .scale-s #func {
+  font-size: 14%; }
+
+.zoom-close #func {
+  width: 200%;
+  font-size: 100%; }
+
+.zoom-close .scale-stretched #func {
+  margin-left: -100%; }
+
+.zoom-close .scale-d #func {
+  margin-left: -106%; }
+
+.zoom-close.view-2D .scale-d #func {
+  font-size: 84%; }
+
+.zoom-close.view-3D .scale-d #func {
+  font-size: 84%; }
+
+.zoom-close .scale-s #func {
+  margin-left: -145%; }
+
+.zoom-close.view-2D .scale-s #func {
+  font-size: 40%; }
+
+.zoom-close.view-3D .scale-s #func {
+  font-size: 40%; }
+
+.zoom-close .ellipse,
+.zoom-close .pos,
+.zoom-close .comm,
+.zoom-close .satelite,
+.zoom-close .ring {
+  animation-play-state: paused!important;
+  animation-duration: 0s!important;
+  animation: none!important; }
+
+.zoom-close.view-2D .comm,
+.zoom-close.view-2D .moon {
+  transform: rotateX(0deg); }
+
+.zoom-close.view-3D .comm {
+  transform: rotateX(-90deg); }
+
+.zoom-close.view-3D .moon {
+  transform: rotateX(90deg); }
+
+.zoom-close .pos {
+  left: 100%!important;
+  top: 50%!important; }
+
+
+#unga .pos,
+#unga .comm,
+#unga.ellipse {
+  animation-duration: 36.57017s; }
+
+#klaqc .pos,
+#klaqc .comm,
+#klaqc.ellipse {
+  animation-duration: 60.35138s; }
+
+#hsc .pos,
+#hsc .comm,
+#hsc.ellipse,
+#hsc .ring {
+  animation-duration: 71.36998s; }
+
+#lok .pos,
+#lok .comm,
+#lok.ellipse {
+  animation-duration: 54.20215s; }
+
+#interpol .pos,
+#interpol .comm,
+#interpol.ellipse {
+  animation-duration: 44.49584s; }
+
+.scale-stretched #sjbhsmun {
+  font-size: 24em; }
+
+.scale-stretched #unga .comm {
+  font-size: 15em; }
+
+.scale-stretched #klaqc .comm {
+  font-size: 15em; }
+
+.scale-stretched #hsc .comm {
+  font-size: 15em; }
+
+.scale-stretched #lok .comm {
+  font-size: 15em; }
+
+.scale-stretched #interpol .comm {
+  font-size: 15em; }
+
+
+.scale-stretched #unga.ellipse {
+  width: 80em;
+  height: 80em;
+  margin-top: -40em;
+  margin-left: -40em; }
+
+.scale-stretched #klaqc.ellipse {
+  width: 120em;
+  height: 120em;
+  margin-top: -60em;
+  margin-left: -60em; }
+
+.scale-stretched #hsc.ellipse {
+  width: 160em;
+  height: 160em;
+  margin-top: -80em;
+  margin-left: -80em; }
+
+.scale-stretched #lok.ellipse {
+  width: 196em;
+  height: 196em;
+  margin-top: -98em;
+  margin-left: -98em; }
+
+.scale-stretched #interpol.ellipse {
+  width: 230em;
+  height: 230em;
+  margin-top: -115em;
+  margin-left: -115em; }
+
+.set-speed dl.infos dd span:after {
+  content: 'Learn More'; }
+
+.set-speed #sjbhsmun dl.infos dd:after {
+  content: 'SJBHSMUN'; }
+
+.set-speed #unga dl.infos dd:after {
+  content: 'Special Political and Decolonization Committee'; }
+
+.set-speed #klaqc dl.infos dd:after {
+  content: 'Kuala Lumpur Al-Qaeda Summit'; }
+
+.set-speed #hsc dl.infos dd:after {
+  content: 'Historic Security Council'; }
+
+.set-speed #lok dl.infos dd:after {
+  content: 'Lok Sabha'; }
+
+.set-speed #interpol dl.infos dd:after {
+  content: 'INTERPOL'; }
+
+#unga .pos {
+  left: 50%;
+  top: 100%; }
+
+
+#klaqc .pos {
+  left: 100%;
+  top: 50%; }
+
+#hsc .pos {
+  left: 0%;
+  top: 50%; }
+
+#lok .pos {
+  left: 50%;
+  top: 100%; }
+
+#interpol .pos {
+  left: 50%;
+  top: 0; }
+
+dl.infos {
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: -90%;
+  margin-left: calc(1vw - 10px);
+  padding-left: 100%;
+  transform-origin: 100% 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(90deg); }
+
+dl.infos:before {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: calc(1.2vw + 16px);
+  left: 40px;
+  bottom: 13px;
+  border-top: 0px solid white;
+  border-left: 1px solid white;
+  transform-style: preserve-3d;
+  transform: skew(0deg, 0deg);
+  box-shadow: inset 0px 0px black; }
+
+dl.infos dt {
+  position: absolute;
+  left: 50px;
+  margin-bottom: 26px;
+  bottom: 30px;
+  color: #FFF;
+  font-size: 14px;
+  text-shadow: 1px 1px 2px black; }
+
+dl.infos dd:after {
+  position: absolute;
+  left: 50px;
+  bottom: 30px;
+  width: 500px;
+  color: #FFF;
+  font-size: 1.4vw;
+  text-shadow: 1px 1px 2px black; }
+
+dl.infos dd span:after {
+  position: absolute;
+  left: 50px;
+  bottom: 14px;
+  width: 400px;
+  color: #FFF;
+  font-size: 11px;
+  text-shadow: 1px 1px 2px black; }
+
+.sjbhsmun #sjbhsmun .infos,
+.unga #unga .infos,
+.klaqc #klaqc .infos,
+.hsc #hsc .infos,
+.lok #lok .infos,
+.interpol #interpol .infos {
+  display: block;
+  opacity: 1;
+  transform: rotateX(0deg); }
+
+.unga #unga.ellipse,
+.klaqc #klaqc.ellipse,
+.hsc #hsc.ellipse,
+.lok #lok.ellipse,
+.interpol #interpol.ellipse {
+  border: 6px solid rgba(255, 255, 255, 0.8); }
+
+
+h1 {
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8); }
+
+h1 span, #navbar1 h1 a {
+  display: inline;
+  position: relative;
+  padding: 0;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5); }
+}
+
+#navbar1, #data {
+  background: rgba(0, 0, 0, 0.4); }
+
+#navbar1 {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 16px;
+  width: 100%;
+  height: 48px; }
+
+#navbar1 a, #data a {
+  color: rgba(255, 255, 255, 0.6);
+  display: block;
+  position: relative;
+  text-decoration: none; }
+
+#navbar1 a:hover, #data a:hover {
+  color: #FFF; }
+
+#data a.active {
+  color: darkgoldenrod; }
+
+#navbar1 a {
+  position: absolute;
+  top: 0;
+  height: 48px;
+  padding: 16px;
+  font-size: 14px; }
+
+#toggle-data {
+  left: 0; }
+
+
+#data {
+  z-index: 99;
+  position: relative;
+  opacity: 1;
+  top: 49px;
+  padding: 16px; }
+
+.data-close #data {
+  left: -100%; }
+
+.data-open #data {
+  left: 0px; }
+
+
+
+#data a {
+  margin-bottom: 1px;
+  padding: 6px 10px;
+  font-size: 18px; }
+
+
+.pos {
+  transition-property: top, left; }
+
+#func, .ellipse,
+.comm,
+.satelite,
+.ring {
+  transition-property: width, height, top, left, margin-left, margin-top, webkit-transform; }
+
+#sjbhsmun, .icon {
+  transition-property: width, height, webkit-transform; }
+
+#func,
+#sjbhsmun,
+.ellipse,
+.pos,
+.comm,
+.satelite,
+.ring,
+.infos,
+.icon {
+  transition-duration: .8s;
+  transition-timing-function: ease-in-out; }
+
+#func,
+#sjbhsmun,
+.comm,
+.satelite,
+.ring {
+  transition-delay: 0s; }
+
+.pos {
+  transition-delay: 1s; }
+
+h1, #data {
+  transition-property: opacity, margin;
+  transition-duration: .8s;
+  transition-timing-function: ease-in-out; }
+
+h1 {
+  transition-delay: .35s; }
+
+#data {
+  transition-delay: .7s; }
+
+#sjbhsmun {
+  background-image: url(sjbhsmunlogo.png); }
+
+
+#unga .comm {
+  background-image: url(specpol%20final.png); }
+
+#klaqc .comm {
+  background-image: url(alqaeda_2.png); }
+
+#hsc .comm {
+  background-image: url(HSC%20final.png); }
+
+#lok .comm {
+  background-image: url(loksabha.png); }
+
+
+#interpol .comm {
+  background-image: url(interpol%20final.png); }
+
+
+@media screen and (max-width: 299px) {
+  #uni {
+    font-size: 20%; } 
+}
+@media screen and (min-width: 300px) {
+  #uni {
+    font-size: 24%; } }
+@media screen and (min-width: 500px) {
+  #uni {
+    font-size: 36%; } }
+@media screen and (min-width: 600px) {
+  #uni {
+    font-size: 44%; } }
+@media screen and (min-width: 760px) {
+  #uni {
+    font-size: 58%; } }
+@media screen and (min-width: 1000px) {
+  #uni {
+    font-size: 73%; }}
+@media screen and (min-width: 0px){
+  #navbar1, #controls, #data {
+    background: transparent; }
+
+  #navbar1 a {
+    display: none; }
+
+  h1 {
+    font-size: 22px;
+    margin-top: 8px; }
+
+
+  #data {
+    position: relative;
+    top: inherit;
+    bottom: 0;
+    width: 100%;
+    text-align: center; }
+
+  #data a {
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px 15px; }
+
+  .data-open #data, .data-close #data {
+    left: 0px; }
+
+  .controls-open #controls, .controls-close #controls {
+    right: 0px; } }
+@media screen and (min-width: 1300px) {
+  #uni {
+    font-size: 100%; } }
+@media screen and (min-width: 1600px) {
+  .zoom-close .scale-d #func {
+    margin-left: -120%; } }
+@media screen and (min-width:  1900px){
+  dl.infos:before {
+    height: 35px;
+  }
+  dl.infos dd:after {
+    font-size: 22px;
+}
+}
+@media screen and (max-width: 1300px){
+    dl.infos {
+      margin-left: -6px;
+    }
+}
+@media screen and (max-width: 1000px){
+    dl.infos {
+      margin-left: -12px;
+    }
+}
+@media screen and (max-width: 760px){
+    dl.infos {
+      margin-left: -18px;
+    }
+}
+@media screen and (max-width: 600px){
+    dl.infos {
+      margin-left: -24px;
+    }
+}
+@media screen and (max-width: 500px){
+    dl.infos {
+      margin-left: -30px;
+    }
+    dl.infos dd:after {
+      font-size: 8px;
+    }
+    dl.infos:before {
+      height: 24px;
+    }
+}
